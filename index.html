@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="Pt-br" class=" runnin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/icon/favicon.svg" type="image/x-icon">
+    <script type="module" defer src="./src/main.js"></script>
+
+    <title>Focus timer 2</title>
+</head>
+<body>
+
+
+    <button id="toggleMode" class="controlButtons">
+        <span class="sr-only">Modo dark ativado</span>
+        <i class="ph ph-sun"></i>
+        <i class="ph ph-moon"></i>
+    </button>
+
+    <div id="app">
+        <section id="timerControls">
+            <div id="display">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="secunds">00</span>
+            </div>
+
+            <div id="controls">
+                <button 
+                    data-action="toggleRunning"
+                    id="start" class="ph ph-play-circle controlButtons">
+                    <span class ="sr-only">Começar</span>
+                </button>
+
+                <button 
+                    data-action="toggleRunning"
+                    id="pause" class="ph ph-pause-circle controlButtons">
+                    <span class ="sr-only">Pausar</span>
+                </button>
+
+                <button 
+                    data-action="stop"
+                    class="ph ph-stop-circle controlButtons" id="stop">
+                    <span class ="sr-only">Parar</span>
+                </button>
+
+                <button 
+                    data-action="increase"
+                    class="ph ph-plus-circle controlButtons" id="increase">
+                    <span class ="sr-only">Aumentar</span>
+                </button>
+
+                <button
+                data-action="decrease"
+                  class="ph ph-minus-circle controlButtons" id="decrease">
+                    <span class ="sr-only">Diminuir</span>
+                </button>
+            
+            </div>
+        </section>
+        <section id="timerSounds">
+            <button
+            data-action="toggleForestSound"
+             class="cardButtons ph ph-tree ">
+                
+                <span class ="sr-only" >Emitir som de floresta</span>
+            </button>
+
+            <button 
+            data-action="toggleRainSound"
+            class="cardButtons ph ph-cloud-rain">
+                
+                <span class ="sr-only">Emitir som de chuva</span>
+            </button>
+
+            <button 
+            data-action="toggleShopSound"
+            class="cardButtons ph ph-storefront ">
+                <span class ="sr-only">Emitir som em uma cafeteria</span>
+            </button>
+
+            <button 
+            data-action="toggleFireSound"
+            class="cardButtons ph ph-flame ">
+               
+                <span class ="sr-only">Emitir som de uma lareira</span>
+            </button>
+        </section>
+
+    </div>
+
+</body>
+</html>

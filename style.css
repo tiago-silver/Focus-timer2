@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-background:black;
+    --bg-button-color: hsla(240, 9%, 89%, 1);
+    --bg-button-color-selected: hsla(194, 97%, 31%, 1);
+    --tt-button-color:rgb(227, 227, 238);
+    
+    --tt-button-color-selected: hsla(0, 0%, 100%, 1);
+    font-size: clamp(30%, 1% + 2vw, 50.5%)
+}
+html.light{
+    --bg-background:white;
+    --bg-button-color: hsla(240, 9%, 89%, 1);
+    --bg-button-color-selected: hsla(194, 97%, 31%, 1);
+    --tt-button-color:hsla(240, 6%, 21%, 1);
+    --tt-button-color-selected: hsla(0, 0%, 100%, 1);
+}
+body{
+    background-color: var(--bg-background);
+    font-family: sans-serif;
+    display: grid;
+    place-content: center;
+    height: 100vh; 
+}
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle{
+    display: none;
+}
+
+
+#app{
+    display :flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12rem;
+
+}
+html.light .ph-sun,
+html:not(.light) .ph-moon{
+    display: none;
+}
+
+#toggleMode{
+    color: var(--tt-button-color);
+    position: absolute;
+    top: 3.2rem;
+    right: calc(50% - (45.97px /2));
+}
+
+#timerControls{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}
+#display{
+    color: var(--tt-button-color);
+    font-size: 9.6rem;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+#controls{
+    display: flex;
+    background-color: var(--bg-button-color);
+    gap: 2.5rem;
+    padding: 1rem;
+    border-radius: 999rem;
+    align-items: center;
+    justify-content: center;
+}
+.controlButtons{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 6rem;
+}
+#timerSounds{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.cardButtons{
+    font-size: 9rem;
+    background-color: var(--bg-button-color);
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.cardButtonsSelected{
+    background-color: var(--bg-button-color-selected);
+}
+@media (min-width: 768px){
+    #app{
+        flex-direction: row;
+    }
+    #toggleMode{
+        right: 3.2rem;
+    }
+}
